@@ -26,13 +26,20 @@ pip install -e ".[dev]"
 ### Setup
 
 1. Clone the repository
-2. Install dependencies:
+2. Create a virtual environment (recommended):
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
 
 ```bash
 pip install -e ".[dev]"
 ```
 
-3. Install pre-commit hooks:
+4. Install pre-commit hooks:
 
 ```bash
 pre-commit install
