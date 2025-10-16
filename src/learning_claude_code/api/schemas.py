@@ -7,7 +7,9 @@ class ItemCreate(BaseModel):
     """Schema for creating an item."""
 
     name: str = Field(..., min_length=1, max_length=100, description="Item name")
-    description: str | None = Field(None, max_length=500, description="Item description")
+    description: str | None = Field(
+        None, max_length=500, description="Item description"
+    )
     price: float = Field(..., gt=0, description="Item price (must be positive)")
     quantity: int = Field(..., ge=0, description="Item quantity (must be non-negative)")
 
